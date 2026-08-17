@@ -1,0 +1,9 @@
+# ninja log v7
+22	47	8087121272199747	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
+54	338	8087121272526944	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
+338	461	8087121275361740	Minecraft-C++.exe	5ef1c47bf7458b38
+51	331	8087121272491830	CMakeFiles/Minecraft-C++.dir/src/engine/core/window.cpp.obj	2a3198f481b2045f
+66	2564	8087117342991512	CMakeFiles/Minecraft-C++.dir/src/glad.c.obj	cf49330ccf4b4106
+19	46	8087123715139574	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
+49	324	8087123715450719	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
+324	447	8087123718200906	Minecraft-C++.exe	5ef1c47bf7458b38
