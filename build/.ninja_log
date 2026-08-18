@@ -1,11 +1,13 @@
 # ninja log v7
-20	47	8087186404675295	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
-51	661	8087186404977952	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
-662	800	8087186411090761	Minecraft-C++.exe	bb1d01ac122159c8
+21	45	8087955787305021	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
+49	700	8087955787600058	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
+701	834	8087955794114452	Minecraft-C++.exe	66805d61b8a9654d
 51	331	8087121272491830	CMakeFiles/Minecraft-C++.dir/src/engine/core/window.cpp.obj	2a3198f481b2045f
 66	2564	8087117342991512	CMakeFiles/Minecraft-C++.dir/src/glad.c.obj	cf49330ccf4b4106
 53	878	8087185687683733	CMakeFiles/Minecraft-C++.dir/src/engine/geometry/mesh.cpp.obj	47929d5f6dc6a96d
 60	395	8087170274021971	CMakeFiles/Minecraft-C++.dir/src/engine/core/shader.cpp.obj	be793732fc168d1c
-18	44	8087186500904680	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
-47	653	8087186501196197	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
-654	788	8087186507262477	Minecraft-C++.exe	bb1d01ac122159c8
+68	211	8087941666503478	CMakeFiles/Minecraft-C++.dir/src/engine/utils.cpp.obj	d9cc02bf9aef1cb4
+58	854	8087952900486112	CMakeFiles/Minecraft-C++.dir/src/engine/core/texture.cpp.obj	75f37397bb85a4b4
+28	54	8087955862198959	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
+58	710	8087955862499471	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
+710	839	8087955869023608	Minecraft-C++.exe	66805d61b8a9654d

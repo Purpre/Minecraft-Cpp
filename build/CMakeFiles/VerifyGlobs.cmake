@@ -15,6 +15,7 @@ endif()
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/C++Projects/Minecraft-C++/src/*.cpp")
 set(OLD_GLOB
   "C:/C++Projects/Minecraft-C++/src/engine/core/shader.cpp"
+  "C:/C++Projects/Minecraft-C++/src/engine/core/texture.cpp"
   "C:/C++Projects/Minecraft-C++/src/engine/core/window.cpp"
   "C:/C++Projects/Minecraft-C++/src/engine/geometry/mesh.cpp"
   "C:/C++Projects/Minecraft-C++/src/main.cpp"
