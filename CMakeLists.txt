@@ -15,6 +15,7 @@ target_include_directories(Minecraft-C++ PRIVATE
 
 target_link_libraries(Minecraft-C++ PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/lib/libglfw3.a
+    opengl32
 )
 
 #target_link_options(Minecraft-C++ PRIVATE

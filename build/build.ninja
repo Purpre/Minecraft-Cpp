@@ -44,11 +44,23 @@ cmake_ninja_workdir = C$:/C++Projects/Minecraft-C++/build/
 
 build cmake_object_order_depends_target_Minecraft-C++: phony || .
 
+build CMakeFiles/Minecraft-C++.dir/src/engine/core/shader.cpp.obj: CXX_COMPILER__Minecraft-C.2b.2b_unscanned_ C$:/C++Projects/Minecraft-C++/src/engine/core/shader.cpp || cmake_object_order_depends_target_Minecraft-C++
+  DEP_FILE = CMakeFiles\Minecraft-C++.dir\src\engine\core\shader.cpp.obj.d
+  INCLUDES = -IC:/C++Projects/Minecraft-C++/include
+  OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft-C++.dir\src\engine\core
+
 build CMakeFiles/Minecraft-C++.dir/src/engine/core/window.cpp.obj: CXX_COMPILER__Minecraft-C.2b.2b_unscanned_ C$:/C++Projects/Minecraft-C++/src/engine/core/window.cpp || cmake_object_order_depends_target_Minecraft-C++
   DEP_FILE = CMakeFiles\Minecraft-C++.dir\src\engine\core\window.cpp.obj.d
   INCLUDES = -IC:/C++Projects/Minecraft-C++/include
   OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
   OBJECT_FILE_DIR = CMakeFiles\Minecraft-C++.dir\src\engine\core
+
+build CMakeFiles/Minecraft-C++.dir/src/engine/geometry/mesh.cpp.obj: CXX_COMPILER__Minecraft-C.2b.2b_unscanned_ C$:/C++Projects/Minecraft-C++/src/engine/geometry/mesh.cpp || cmake_object_order_depends_target_Minecraft-C++
+  DEP_FILE = CMakeFiles\Minecraft-C++.dir\src\engine\geometry\mesh.cpp.obj.d
+  INCLUDES = -IC:/C++Projects/Minecraft-C++/include
+  OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft-C++.dir\src\engine\geometry
 
 build CMakeFiles/Minecraft-C++.dir/src/glad.c.obj: C_COMPILER__Minecraft-C.2b.2b_unscanned_ C$:/C++Projects/Minecraft-C++/src/glad.c || cmake_object_order_depends_target_Minecraft-C++
   DEP_FILE = CMakeFiles\Minecraft-C++.dir\src\glad.c.obj.d
@@ -70,8 +82,8 @@ build CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj: CXX_COMPILER__Minecraft-C.2
 #############################################
 # Link the executable Minecraft-C++.exe
 
-build Minecraft-C++.exe: CXX_EXECUTABLE_LINKER__Minecraft-C.2b.2b_ CMakeFiles/Minecraft-C++.dir/src/engine/core/window.cpp.obj CMakeFiles/Minecraft-C++.dir/src/glad.c.obj CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj | C$:/C++Projects/Minecraft-C++/lib/libglfw3.a
-  LINK_LIBRARIES = C:/C++Projects/Minecraft-C++/lib/libglfw3.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+build Minecraft-C++.exe: CXX_EXECUTABLE_LINKER__Minecraft-C.2b.2b_ CMakeFiles/Minecraft-C++.dir/src/engine/core/shader.cpp.obj CMakeFiles/Minecraft-C++.dir/src/engine/core/window.cpp.obj CMakeFiles/Minecraft-C++.dir/src/engine/geometry/mesh.cpp.obj CMakeFiles/Minecraft-C++.dir/src/glad.c.obj CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj | C$:/C++Projects/Minecraft-C++/lib/libglfw3.a
+  LINK_LIBRARIES = C:/C++Projects/Minecraft-C++/lib/libglfw3.a  -lopengl32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
