@@ -1,7 +1,7 @@
 # ninja log v7
-38	68	8088026739092609	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
-78	1153	8088026739489914	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
-1154	1322	8088026750250872	Minecraft-C++.exe	191fa427ed4547cd
+26	54	8088033682471022	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
+58	1019	8088033682797348	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
+1020	1187	8088033692420622	Minecraft-C++.exe	191fa427ed4547cd
 51	331	8087121272491830	CMakeFiles/Minecraft-C++.dir/src/engine/core/window.cpp.obj	2a3198f481b2045f
 66	2564	8087117342991512	CMakeFiles/Minecraft-C++.dir/src/glad.c.obj	cf49330ccf4b4106
 65	959	8088023979378160	CMakeFiles/Minecraft-C++.dir/src/engine/geometry/mesh.cpp.obj	47929d5f6dc6a96d
@@ -11,9 +11,9 @@
 60	113	8087965689473850	CMakeFiles/Minecraft-C++.dir/src/engine/core/renderer.cpp.obj	347a66ee3fe1b56f
 55	635	8087975010939690	CMakeFiles/Minecraft-C++.dir/src/engine/core/camera.cpp.obj	2a580179361173d5
 82	1032	8088026739539922	CMakeFiles/Minecraft-C++.dir/src/world/block.cpp.obj	5793bb5aae9b783d
-73	836	8088026739439897	CMakeFiles/Minecraft-C++.dir/src/blocks/blocks.cpp.obj	d3e01ccb42d71fbc
+55	715	8088026873272479	CMakeFiles/Minecraft-C++.dir/src/blocks/blocks.cpp.obj	d3e01ccb42d71fbc
 86	1085	8088026739579919	CMakeFiles/Minecraft-C++.dir/src/world/chunk.cpp.obj	8dd712ce8e402300
 91	885	8088026739619917	CMakeFiles/Minecraft-C++.dir/src/world/world.cpp.obj	813900c8c3d4c87e
-22	51	8088026872939998	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
-55	715	8088026873272479	CMakeFiles/Minecraft-C++.dir/src/blocks/blocks.cpp.obj	d3e01ccb42d71fbc
-715	883	8088026879870073	Minecraft-C++.exe	191fa427ed4547cd
+34	63	8088034389759298	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
+68	1014	8088034390107164	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
+1015	1192	8088034399572773	Minecraft-C++.exe	191fa427ed4547cd

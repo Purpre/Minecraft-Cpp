@@ -25,21 +25,24 @@ int main()
     Camera camera;
 
     Texture texture("../assets/terrain.png");
-
     Shader shader("../shaders/vertex.glsl", "../shaders/fragment.glsl");
 
     camera.setup(shader, window);
 
-    std::unordered_map<glm::vec3, uint8_t, Vec3Hash> terrain = {
-        {glm::vec3(0, 0, 0), 0},
-        {glm::vec3(1, 0, 0), 0},
-        {glm::vec3(2, 0, 0), 0},
-        {glm::vec3(3, 0, 0), 0},
-        {glm::vec3(4, 0, 0), 0},
-        {glm::vec3(5, 0, 0), 0},
-        {glm::vec3(6, 0, 0), 0},
-        {glm::vec3(7, 0, 0), 1},
-    };
+    std::unordered_map<glm::vec3, uint8_t, Vec3Hash> terrain = {};
+
+    for (int x = -8; x < 8; x++)
+    {
+        for (int z = -8; z < 8; z++)
+        {
+            terrain.insert({glm::vec3(x, 0, z), 0}); // Grass
+            for (int y = -8; y < 0; y++)
+        {
+            terrain.insert({glm::vec3(x, y, z), 1}); // Cobblestone
+            
+        }
+        }
+    }
 
     Chunk chunk;
     chunk.terrain = terrain;
