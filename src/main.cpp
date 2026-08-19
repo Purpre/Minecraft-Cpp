@@ -4,6 +4,9 @@
 #include <engine/geometry/mesh.hpp>
 #include <engine/core/shader.hpp>
 #include <engine/core/texture.hpp>
+#include <engine/core/camera.hpp>
+#include <blocks/blocks.hpp>
+#include <world/chunk.hpp>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -13,28 +16,52 @@ using std::cout, std::string, glm::vec3, glm::vec2;
 
 int main()
 {
+    BlockRegistry::registerBlocks();
+
     Window::init();
 
-    Window window("Minecraft C++", 800, 800);
+    Window window("Minecraft C++", 1000, 800);
 
-    MeshBuilder builder;
-    builder.AddFace(FRONT, vec3(0, 0, 0), vec2(0, 15), vec3(0, 0, 1), vec3(0.666667f, 1.13725f, 0.364706f));
+    Camera camera;
 
     Texture texture("../assets/terrain.png");
 
-    Mesh mesh(builder.vertices.data(), builder.vertices.size() * sizeof(float), builder.indices.data(), builder.indices.size() * sizeof(float));
-
     Shader shader("../shaders/vertex.glsl", "../shaders/fragment.glsl");
 
+    camera.setup(shader, window);
+
+    std::unordered_map<glm::vec3, uint8_t, Vec3Hash> terrain = {
+        {glm::vec3(0, 0, 0), 0},
+        {glm::vec3(1, 0, 0), 0},
+        {glm::vec3(2, 0, 0), 0},
+        {glm::vec3(3, 0, 0), 0},
+        {glm::vec3(4, 0, 0), 0},
+        {glm::vec3(5, 0, 0), 0},
+        {glm::vec3(6, 0, 0), 0},
+        {glm::vec3(7, 0, 0), 1},
+    };
+
+    Chunk chunk;
+    chunk.terrain = terrain;
+
+    chunk.generateMesh();
+    chunk.setupMesh(shader);
+
+    double lastTime = glfwGetTime();
     glEnable(GL_DEPTH_TEST);
     while (!glfwWindowShouldClose(window))
     {
+        double currentTime = glfwGetTime();
+        float delta = currentTime - lastTime;
+        lastTime = currentTime;
+
         glClearColor(0.4f, 0.6f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         texture.bind();
         shader.Use();
-        mesh.Draw();
+        chunk.draw();
+        camera.update(delta, window);
 
         glfwSwapBuffers(window);
         glfwPollEvents();

@@ -43,6 +43,11 @@ std::unordered_map<side, glm::vec3> faceNormals = {
     {RIGHT, vec3(1.0f, 0.0f, 0.0f)},
     {LEFT, vec3(-1.0f, 0.0f, 0.0f)}};
 
+Mesh::Mesh()
+{
+    
+}
+
 Mesh::Mesh(float vertices[],
            size_t vertexSize,
            unsigned int indices[],
@@ -81,18 +86,25 @@ Mesh::Mesh(float vertices[],
     glEnableVertexAttribArray(3);
 
     glBindVertexArray(0);
+
+    model = glm::mat4(1.0f);
 }
 
 void Mesh::Draw()
 {
+    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
     glBindVertexArray(VAO);
     glDrawElements(GL_TRIANGLES, indexCount, GL_UNSIGNED_INT, 0);
+}
+
+void Mesh::SetupModelUniform(unsigned int ShaderProgram)
+{
+    modelLoc = glGetUniformLocation(ShaderProgram, "model");
 }
 
 void MeshBuilder::AddFace(side faceSide,
                           vec3 pos,
                           vec2 atlasTile,
-                          vec3 normal,
                           vec3 color)
 {
     int tileX = atlasTile.x; // Columm

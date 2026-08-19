@@ -24,8 +24,6 @@ Texture::Texture(string path)
         return;
     }
 
-    std::cout << "Texture was load succesfully\n";
-
     GLenum format;
 
     if (nrChannels == 3)

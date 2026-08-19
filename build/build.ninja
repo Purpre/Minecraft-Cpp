@@ -44,6 +44,24 @@ cmake_ninja_workdir = C$:/C++Projects/Minecraft-C++/build/
 
 build cmake_object_order_depends_target_Minecraft-C++: phony || .
 
+build CMakeFiles/Minecraft-C++.dir/src/blocks/blocks.cpp.obj: CXX_COMPILER__Minecraft-C.2b.2b_unscanned_ C$:/C++Projects/Minecraft-C++/src/blocks/blocks.cpp || cmake_object_order_depends_target_Minecraft-C++
+  DEP_FILE = CMakeFiles\Minecraft-C++.dir\src\blocks\blocks.cpp.obj.d
+  INCLUDES = -IC:/C++Projects/Minecraft-C++/include
+  OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft-C++.dir\src\blocks
+
+build CMakeFiles/Minecraft-C++.dir/src/engine/core/camera.cpp.obj: CXX_COMPILER__Minecraft-C.2b.2b_unscanned_ C$:/C++Projects/Minecraft-C++/src/engine/core/camera.cpp || cmake_object_order_depends_target_Minecraft-C++
+  DEP_FILE = CMakeFiles\Minecraft-C++.dir\src\engine\core\camera.cpp.obj.d
+  INCLUDES = -IC:/C++Projects/Minecraft-C++/include
+  OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft-C++.dir\src\engine\core
+
+build CMakeFiles/Minecraft-C++.dir/src/engine/core/renderer.cpp.obj: CXX_COMPILER__Minecraft-C.2b.2b_unscanned_ C$:/C++Projects/Minecraft-C++/src/engine/core/renderer.cpp || cmake_object_order_depends_target_Minecraft-C++
+  DEP_FILE = CMakeFiles\Minecraft-C++.dir\src\engine\core\renderer.cpp.obj.d
+  INCLUDES = -IC:/C++Projects/Minecraft-C++/include
+  OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft-C++.dir\src\engine\core
+
 build CMakeFiles/Minecraft-C++.dir/src/engine/core/shader.cpp.obj: CXX_COMPILER__Minecraft-C.2b.2b_unscanned_ C$:/C++Projects/Minecraft-C++/src/engine/core/shader.cpp || cmake_object_order_depends_target_Minecraft-C++
   DEP_FILE = CMakeFiles\Minecraft-C++.dir\src\engine\core\shader.cpp.obj.d
   INCLUDES = -IC:/C++Projects/Minecraft-C++/include
@@ -80,6 +98,24 @@ build CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj: CXX_COMPILER__Minecraft-C.2
   OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
   OBJECT_FILE_DIR = CMakeFiles\Minecraft-C++.dir\src
 
+build CMakeFiles/Minecraft-C++.dir/src/world/block.cpp.obj: CXX_COMPILER__Minecraft-C.2b.2b_unscanned_ C$:/C++Projects/Minecraft-C++/src/world/block.cpp || cmake_object_order_depends_target_Minecraft-C++
+  DEP_FILE = CMakeFiles\Minecraft-C++.dir\src\world\block.cpp.obj.d
+  INCLUDES = -IC:/C++Projects/Minecraft-C++/include
+  OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft-C++.dir\src\world
+
+build CMakeFiles/Minecraft-C++.dir/src/world/chunk.cpp.obj: CXX_COMPILER__Minecraft-C.2b.2b_unscanned_ C$:/C++Projects/Minecraft-C++/src/world/chunk.cpp || cmake_object_order_depends_target_Minecraft-C++
+  DEP_FILE = CMakeFiles\Minecraft-C++.dir\src\world\chunk.cpp.obj.d
+  INCLUDES = -IC:/C++Projects/Minecraft-C++/include
+  OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft-C++.dir\src\world
+
+build CMakeFiles/Minecraft-C++.dir/src/world/world.cpp.obj: CXX_COMPILER__Minecraft-C.2b.2b_unscanned_ C$:/C++Projects/Minecraft-C++/src/world/world.cpp || cmake_object_order_depends_target_Minecraft-C++
+  DEP_FILE = CMakeFiles\Minecraft-C++.dir\src\world\world.cpp.obj.d
+  INCLUDES = -IC:/C++Projects/Minecraft-C++/include
+  OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minecraft-C++.dir\src\world
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Minecraft-C++
@@ -88,7 +124,7 @@ build CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj: CXX_COMPILER__Minecraft-C.2
 #############################################
 # Link the executable Minecraft-C++.exe
 
-build Minecraft-C++.exe: CXX_EXECUTABLE_LINKER__Minecraft-C.2b.2b_ CMakeFiles/Minecraft-C++.dir/src/engine/core/shader.cpp.obj CMakeFiles/Minecraft-C++.dir/src/engine/core/texture.cpp.obj CMakeFiles/Minecraft-C++.dir/src/engine/core/window.cpp.obj CMakeFiles/Minecraft-C++.dir/src/engine/geometry/mesh.cpp.obj CMakeFiles/Minecraft-C++.dir/src/glad.c.obj CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj | C$:/C++Projects/Minecraft-C++/lib/libglfw3.a
+build Minecraft-C++.exe: CXX_EXECUTABLE_LINKER__Minecraft-C.2b.2b_ CMakeFiles/Minecraft-C++.dir/src/blocks/blocks.cpp.obj CMakeFiles/Minecraft-C++.dir/src/engine/core/camera.cpp.obj CMakeFiles/Minecraft-C++.dir/src/engine/core/renderer.cpp.obj CMakeFiles/Minecraft-C++.dir/src/engine/core/shader.cpp.obj CMakeFiles/Minecraft-C++.dir/src/engine/core/texture.cpp.obj CMakeFiles/Minecraft-C++.dir/src/engine/core/window.cpp.obj CMakeFiles/Minecraft-C++.dir/src/engine/geometry/mesh.cpp.obj CMakeFiles/Minecraft-C++.dir/src/glad.c.obj CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj CMakeFiles/Minecraft-C++.dir/src/world/block.cpp.obj CMakeFiles/Minecraft-C++.dir/src/world/chunk.cpp.obj CMakeFiles/Minecraft-C++.dir/src/world/world.cpp.obj | C$:/C++Projects/Minecraft-C++/lib/libglfw3.a
   LINK_LIBRARIES = C:/C++Projects/Minecraft-C++/lib/libglfw3.a  -lopengl32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Minecraft-C++.dir
   POST_BUILD = cd .

@@ -30,8 +30,12 @@ public:
     Mesh();
 
     void Draw();
+    void SetupModelUniform(unsigned int ShaderProgram);
+
+    glm::mat4 model;
 
 private:
+    unsigned int modelLoc;
     GLsizei indexCount;
     unsigned int VAO, VBO, EBO;
 };
@@ -45,6 +49,5 @@ public:
     void AddFace(side faceSide,
                  glm::vec3 pos,
                  glm::vec2 atlasTile,
-                 glm::vec3 normal,
                  glm::vec3 color = glm::vec3(1.0f, 1.0f, 1.0f));
 };
