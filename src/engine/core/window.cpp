@@ -28,3 +28,4 @@ Window::Window(const char *name, unsigned int sizex, unsigned int sizey)
         return;
     }
 }
+

@@ -7,6 +7,8 @@
 #include <engine/core/camera.hpp>
 #include <blocks/blocks.hpp>
 #include <world/chunk.hpp>
+#include <world/world.hpp>
+#include <engine/core/renderer.hpp>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -20,21 +22,22 @@ int main()
 
     Window::init();
 
-    Window window("Minecraft C++", 1000, 800);
-
+    Window window("Minecraft C++", 1200, 1000);
     Camera camera;
-
     Texture texture("../assets/terrain.png");
     Shader shader("../shaders/vertex.glsl", "../shaders/fragment.glsl");
 
+    Renderer renderer;
+    renderer.window = &window;
+    renderer.texture = &texture;
+    renderer.shader = &shader;
+    renderer.camera = &camera;
+
     camera.setup(shader, window);
 
-    Chunk chunk;
-    chunk.pos = vec2(0, 0);
-    chunk.generateTerrain();
-
-    chunk.generateMesh();
-    chunk.setupMesh(shader);
+    World world;
+    world.generateWorld(48);
+    world.setupChunkMeshes(shader);
 
     double lastTime = glfwGetTime();
     glEnable(GL_DEPTH_TEST);
@@ -47,10 +50,7 @@ int main()
         glClearColor(0.4f, 0.6f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        texture.bind(); 
-        shader.Use();
-        chunk.draw();
-        camera.update(delta, window);
+        renderer.render(world.chunks, delta);
 
         glfwSwapBuffers(window);
         glfwPollEvents();
