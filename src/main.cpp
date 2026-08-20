@@ -36,7 +36,7 @@ int main()
     camera.setup(shader, window);
 
     World world;
-    world.generateWorld(48);
+    world.generateWorld(24);
     world.setupChunkMeshes(shader);
 
     double lastTime = glfwGetTime();

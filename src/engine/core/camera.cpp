@@ -45,7 +45,7 @@ void Camera::MouseMove(double xpos, double ypos)
 
 void Camera::update(float delta, GLFWwindow *win)
 {
-    const float cameraSpeed = 5.0f * delta; // velocidade normal
+    const float cameraSpeed = 10.0f * delta; // velocidade normal
 
     if (glfwGetKey(win, GLFW_KEY_W) == GLFW_PRESS)
         cameraPos += cameraSpeed * cameraFront;
