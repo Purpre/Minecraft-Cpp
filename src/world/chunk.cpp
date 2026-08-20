@@ -43,3 +43,38 @@ void Chunk::draw()
 {
     this->chunkMesh.Draw();
 }
+
+void Chunk::generateTerrain(bool random)
+{
+    if (!random)
+    {
+        for (int x = (pos.x * 16) - 8; x < (pos.x * 16) + 8; x++)
+        {
+            for (int z = (pos.y * 16) - 8; z < (pos.y * 16) + 8; z++)
+            {
+                terrain.insert({glm::vec3(x, 0, z), 0}); // Grass
+                for (int y = -8; y < 0; y++)
+                {
+                    terrain.insert({glm::vec3(x, y, z), 1}); // Cobblestone
+                }
+            }
+        }
+    }
+    else
+    {
+        FastNoiseLite noise;
+        noise.SetNoiseType(FastNoiseLite::NoiseType_Perlin);
+
+        for (int y = (pos.x * 16) - 8; y < (pos.x * 16) + 8; y++)
+        {
+            for (int x = (pos.y * 16) - 8; x < (pos.y * 16) + 8; x++)
+            {
+                float noiseValue = noise.GetNoise((float)x, (float)y);
+
+                int height = static_cast<int>(
+                    (noiseValue + 1.0f) / 2.0f * 64.0f);
+                terrain.insert({glm::vec3(x, height - 32, y), 0}); // Grass
+            }
+        }
+    }
+}

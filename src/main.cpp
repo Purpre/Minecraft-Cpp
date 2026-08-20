@@ -29,23 +29,9 @@ int main()
 
     camera.setup(shader, window);
 
-    std::unordered_map<glm::vec3, uint8_t, Vec3Hash> terrain = {};
-
-    for (int x = -8; x < 8; x++)
-    {
-        for (int z = -8; z < 8; z++)
-        {
-            terrain.insert({glm::vec3(x, 0, z), 0}); // Grass
-            for (int y = -8; y < 0; y++)
-        {
-            terrain.insert({glm::vec3(x, y, z), 1}); // Cobblestone
-            
-        }
-        }
-    }
-
     Chunk chunk;
-    chunk.terrain = terrain;
+    chunk.pos = vec2(0, 0);
+    chunk.generateTerrain();
 
     chunk.generateMesh();
     chunk.setupMesh(shader);
@@ -61,7 +47,7 @@ int main()
         glClearColor(0.4f, 0.6f, 1.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        texture.bind();
+        texture.bind(); 
         shader.Use();
         chunk.draw();
         camera.update(delta, window);

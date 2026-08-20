@@ -12,6 +12,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include <FastNoiseLite.h>
+
 struct Vec3Hash
 {
     std::size_t operator()(const glm::vec3 &v) const
@@ -37,4 +39,6 @@ public:
     void generateMesh();
     void setupMesh(Shader shader);
     void draw();
+
+    void generateTerrain(bool random = true);
 };

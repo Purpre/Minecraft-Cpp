@@ -6,5 +6,7 @@
 
 class World
 {
+    public:
+
     std::vector<Chunk> chunks;
 };
