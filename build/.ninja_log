@@ -1,10 +1,10 @@
 # ninja log v7
-17	45	8088916806158742	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
-56	842	8088916396346592	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
-698	853	8088916812963177	Minecraft-C++.exe	191fa427ed4547cd
+21	48	8090250235676970	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
+52	829	8090250235992071	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
+830	987	8090250243773353	Minecraft-C++.exe	191fa427ed4547cd
 57	367	8088896927800058	CMakeFiles/Minecraft-C++.dir/src/engine/core/window.cpp.obj	2a3198f481b2045f
 66	2564	8087117342991512	CMakeFiles/Minecraft-C++.dir/src/glad.c.obj	cf49330ccf4b4106
-65	959	8088023979378160	CMakeFiles/Minecraft-C++.dir/src/engine/geometry/mesh.cpp.obj	47929d5f6dc6a96d
+51	878	8090248537609677	CMakeFiles/Minecraft-C++.dir/src/engine/geometry/mesh.cpp.obj	47929d5f6dc6a96d
 60	395	8087170274021971	CMakeFiles/Minecraft-C++.dir/src/engine/core/shader.cpp.obj	be793732fc168d1c
 68	211	8087941666503478	CMakeFiles/Minecraft-C++.dir/src/engine/utils.cpp.obj	d9cc02bf9aef1cb4
 50	880	8087988132158785	CMakeFiles/Minecraft-C++.dir/src/engine/core/texture.cpp.obj	75f37397bb85a4b4
@@ -12,8 +12,8 @@
 50	697	8088916806487814	CMakeFiles/Minecraft-C++.dir/src/engine/core/camera.cpp.obj	2a580179361173d5
 82	1032	8088026739539922	CMakeFiles/Minecraft-C++.dir/src/world/block.cpp.obj	5793bb5aae9b783d
 55	715	8088026873272479	CMakeFiles/Minecraft-C++.dir/src/blocks/blocks.cpp.obj	d3e01ccb42d71fbc
-59	977	8088890737854658	CMakeFiles/Minecraft-C++.dir/src/world/chunk.cpp.obj	8dd712ce8e402300
+63	961	8090235653561196	CMakeFiles/Minecraft-C++.dir/src/world/chunk.cpp.obj	8dd712ce8e402300
 46	820	8088911815250114	CMakeFiles/Minecraft-C++.dir/src/world/world.cpp.obj	813900c8c3d4c87e
-19	47	8088917339046955	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
-51	818	8088917339363805	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
-818	982	8088917347030632	Minecraft-C++.exe	191fa427ed4547cd
+29	57	8090250817473142	C:/C++Projects/Minecraft-C++/build/CMakeFiles/cmake.verify_globs	fbbce6274ddbe5be
+61	844	8090250817798257	CMakeFiles/Minecraft-C++.dir/src/main.cpp.obj	68b3794ad4210120
+845	1001	8090250825632176	Minecraft-C++.exe	191fa427ed4547cd

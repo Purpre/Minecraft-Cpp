@@ -2,30 +2,36 @@
 
 using std::vector, glm::vec3, glm::vec2;
 
-vector<float> FrontVertices = {0.5f, 0.5f, 0.5f,
-                               0.5f, -0.5f, 0.5f,
-                               -0.5f, -0.5f, 0.5f,
-                               -0.5f, 0.5f, 0.5f};
-vector<float> BackVertices = {0.5f, 0.5f, -0.5f,
-                              0.5f, -0.5f, -0.5f,
-                              -0.5f, -0.5f, -0.5f,
-                              -0.5f, 0.5f, -0.5f};
-vector<float> TopVertices = {0.5f, 0.5f, 0.5f,
-                             -0.5f, 0.5f, 0.5f,
-                             -0.5f, 0.5f, -0.5f,
-                             0.5f, 0.5f, -0.5f};
-vector<float> BottomVertices = {0.5f, -0.5f, 0.5f,
-                                -0.5f, -0.5f, 0.5f,
-                                -0.5f, -0.5f, -0.5f,
-                                0.5f, -0.5f, -0.5f};
-vector<float> RightVertices = {0.5f, 0.5f, 0.5f,
-                               0.5f, -0.5f, 0.5f,
-                               0.5f, -0.5f, -0.5f,
-                               0.5f, 0.5f, -0.5f};
-vector<float> LeftVertices = {-0.5f, 0.5f, 0.5f,
-                              -0.5f, -0.5f, 0.5f,
-                              -0.5f, -0.5f, -0.5f,
-                              -0.5f, 0.5f, -0.5f};
+vector<float> FrontVertices = {
+    0.5f, 0.5f, 0.5f,
+    0.5f, -0.5f, 0.5f,
+    -0.5f, -0.5f, 0.5f,
+    -0.5f, 0.5f, 0.5f};
+vector<float> BackVertices = {
+    -0.5f, 0.5f, -0.5f,
+    -0.5f, -0.5f, -0.5f,
+    0.5f, -0.5f, -0.5f,
+    0.5f, 0.5f, -0.5f};
+vector<float> TopVertices = {
+    0.5f, 0.5f, -0.5f,
+    0.5f, 0.5f, 0.5f,
+    -0.5f, 0.5f, 0.5f,
+    -0.5f, 0.5f, -0.5f};
+vector<float> BottomVertices = {
+    0.5f, -0.5f, 0.5f,
+    0.5f, -0.5f, -0.5f,
+    -0.5f, -0.5f, -0.5f,
+    -0.5f, -0.5f, 0.5f};
+vector<float> RightVertices = {
+    0.5f, 0.5f, -0.5f,
+    0.5f, -0.5f, -0.5f,
+    0.5f, -0.5f, 0.5f,
+    0.5f, 0.5f, 0.5f};
+vector<float> LeftVertices = {
+    -0.5f, 0.5f, 0.5f,
+    -0.5f, -0.5f, 0.5f,
+    -0.5f, -0.5f, -0.5f,
+    -0.5f, 0.5f, -0.5f};
 
 std::unordered_map<side, vector<float>> faceVertices = {
     {FRONT, FrontVertices},
@@ -45,7 +51,6 @@ std::unordered_map<side, glm::vec3> faceNormals = {
 
 Mesh::Mesh()
 {
-    
 }
 
 Mesh::Mesh(float vertices[],
@@ -125,10 +130,10 @@ void MeshBuilder::AddFace(side faceSide,
                                      pos.x + VerticesBuffer[9], pos.y + VerticesBuffer[10], pos.z + VerticesBuffer[11], u, v + texSize, color.x, color.y, color.z, faceNormal.x, faceNormal.y, faceNormal.z});
     unsigned int offset = vertices.size() / 11 - 4;
 
-    indices.insert(indices.end(), {offset + 0,
+    indices.insert(indices.end(), {offset + 3,
                                    offset + 1,
+                                   offset + 0,
                                    offset + 3,
-                                   offset + 1,
                                    offset + 2,
-                                   offset + 3});
+                                   offset + 1});
 }
