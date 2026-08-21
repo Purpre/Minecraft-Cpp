@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <functional>
+#include <random>
 
 #include <engine/geometry/mesh.hpp>
 #include <world/block.hpp>

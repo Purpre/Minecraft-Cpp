@@ -9,6 +9,12 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+enum blockMeshType
+{
+    BLOCK,
+    CROSS
+};
+
 struct blockFaceTexture
 {
     glm::vec2 texture;
@@ -17,6 +23,7 @@ struct blockFaceTexture
 
 struct BlockTexture
 {
+    blockMeshType meshType = BLOCK;
     blockFaceTexture topTexture;
     blockFaceTexture sideTexture;
     blockFaceTexture bottomTexture;

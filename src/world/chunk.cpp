@@ -1,5 +1,57 @@
 #include <world/chunk.hpp>
 
+void GenerateOakTree(std::unordered_map<glm::vec3, uint8_t, Vec3Hash> &terrain, int x, int z, int groundY)
+{
+    int trunkHeight = 6;
+
+    for (int y = 0; y < trunkHeight; y++)
+    {
+        terrain[{x, groundY + y, z}] = OAK_LOG;
+    }
+
+    int top = groundY + trunkHeight;
+
+    terrain[{x, top, z}] = OAK_LEAVES;
+
+    for (int y = 0; y > -4; y--)
+    {
+        if (y == 0)
+        {
+            for (int i = -1; i <= 1; i += 2)
+                terrain[{x + i, top + y, z}] = OAK_LEAVES;
+            for (int i = -1; i <= 1; i += 2)
+                terrain[{x, top + y, z + i}] = OAK_LEAVES;
+        }
+        else
+        {
+            for (int i = -1; i <= 1; i += 2)
+                terrain[{x + i, top + y, z}] = OAK_LEAVES;
+            for (int i = -1; i <= 1; i += 2)
+                terrain[{x + i, top + y, z - 1}] = OAK_LEAVES;
+            for (int i = -1; i <= 1; i += 2)
+                terrain[{x + i, top + y, z + 1}] = OAK_LEAVES;
+            for (int i = -1; i <= 1; i += 2)
+                terrain[{x, top + y, z + i}] = OAK_LEAVES;
+        }
+    }
+    for (int _x = 0; _x < 5; _x++)
+    {
+        for (int y = 0; y < 2; y++)
+        {
+            terrain[{x - 2, top - 3 + y, z + _x - 2}] = OAK_LEAVES;
+            terrain[{x + 2, top - 3 + y, z + _x - 2}] = OAK_LEAVES;
+        }
+    }
+    for (int _x = 0; _x < 3; _x++)
+    {
+        for (int y = 0; y < 2; y++)
+        {
+            terrain[{x + _x - 1, top - 3 + y, z + 2}] = OAK_LEAVES;
+            terrain[{x + _x - 1, top - 3 + y, z - 2}] = OAK_LEAVES;
+        }
+    }
+}
+
 void Chunk::generateMesh()
 {
 
@@ -73,7 +125,22 @@ void Chunk::generateTerrain(bool random)
 
                 int height = static_cast<int>(
                     (noiseValue + 1.0f) / 2.0f * 64.0f);
-                terrain.insert({glm::vec3(x, height - 32, y), GRASS});
+
+                std::random_device rd;
+                std::mt19937 gen(rd());
+                std::uniform_int_distribution<int> distrib(1, 1000);
+                int random_num = distrib(gen);
+
+                if (random_num == 1)
+                {
+                    GenerateOakTree(terrain, x, y, height - 31);
+                }
+                else if (random_num > 1 && random_num < 10)
+                {
+                    //terrain.insert({glm::vec3(x, height - 31, y), GRASS});
+                }
+
+                terrain.insert({glm::vec3(x, height - 32, y), GRASS_BLOCK});
                 terrain.insert({glm::vec3(x, height - 33, y), DIRT});
                 terrain.insert({glm::vec3(x, height - 34, y), STONE});
                 terrain.insert({glm::vec3(x, height - 35, y), STONE});

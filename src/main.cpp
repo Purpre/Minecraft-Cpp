@@ -58,7 +58,7 @@ int main()
 
         renderer.render(world.chunks, delta);
 
-        glfwSwapBuffers(window);
+        glfwSwapBuffers(window);           
         glfwPollEvents();
     }
 
