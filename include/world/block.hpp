@@ -37,4 +37,9 @@ public:
     BlockTexture texture;
 
     std::string name;
+
+    operator uint8_t() const
+    {
+        return ID;
+    }
 };

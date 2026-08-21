@@ -73,7 +73,10 @@ void Chunk::generateTerrain(bool random)
 
                 int height = static_cast<int>(
                     (noiseValue + 1.0f) / 2.0f * 64.0f);
-                terrain.insert({glm::vec3(x, height - 32, y), 0}); // Grass
+                terrain.insert({glm::vec3(x, height - 32, y), GRASS});
+                terrain.insert({glm::vec3(x, height - 33, y), DIRT});
+                terrain.insert({glm::vec3(x, height - 34, y), STONE});
+                terrain.insert({glm::vec3(x, height - 35, y), STONE});
             }
         }
     }

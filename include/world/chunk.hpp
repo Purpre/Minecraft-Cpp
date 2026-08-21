@@ -6,6 +6,7 @@
 
 #include <engine/geometry/mesh.hpp>
 #include <world/block.hpp>
+#include <blocks/blocks.hpp>
 #include <engine/core/shader.hpp>
 
 #include <glm/glm.hpp>
