@@ -22,7 +22,7 @@ int main()
 
     Window::init();
 
-    Window window("Minecraft C++", 1200, 1000);
+    Window window("Minecraft C++", 1920, 1080);
     Camera camera;
     Texture texture("../assets/terrain.png");
     Shader shader("../shaders/vertex.glsl", "../shaders/fragment.glsl");
@@ -52,9 +52,6 @@ int main()
         double currentTime = glfwGetTime();
         float delta = currentTime - lastTime;
         lastTime = currentTime;
-
-        glClearColor(0.4f, 0.6f, 1.0f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         renderer.render(world.chunks, delta);
 

@@ -114,6 +114,7 @@ void Chunk::generateTerrain(bool random)
     }
     else
     {
+
         FastNoiseLite noise;
         noise.SetNoiseType(FastNoiseLite::NoiseType_Perlin);
 
@@ -137,7 +138,7 @@ void Chunk::generateTerrain(bool random)
                 }
                 else if (random_num > 1 && random_num < 10)
                 {
-                    //terrain.insert({glm::vec3(x, height - 31, y), GRASS});
+                    // terrain.insert({glm::vec3(x, height - 31, y), GRASS});
                 }
 
                 terrain.insert({glm::vec3(x, height - 32, y), GRASS_BLOCK});
